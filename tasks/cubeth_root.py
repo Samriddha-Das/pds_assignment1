@@ -24,5 +24,6 @@ def find_cube_root(num : int) -> int:
     else:
         print("Invalid input, Enter a perfect cube number")
     return c
+    
 
 
