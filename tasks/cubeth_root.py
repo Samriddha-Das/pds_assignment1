@@ -16,7 +16,13 @@ def find_cube_root(num : int) -> int:
     Output : Your function should return the cube root of the given number
     """
     # Write your code here
-    cube_root=int(num**1/3)
-    return cube_root
+    
+    if num > 0:
+        c = num ** (1/3)
+    if c.is_integer() == True:
+        print("The cube root is ", int(c))
+    else:
+        print("Invalid input, Enter a perfect cube number")
+    return c
 
 

@@ -23,6 +23,27 @@ def make_student_report(name : str, roll_no : str, grades : list) -> str:
     """
     
     # Write your code here
-    
+    s = 0
+    for i in grades:
+        s += i
+    gpa = s / len(grades)
+
+    flag = 1
+    for i in range(len(grades)):
+        if grades[i] <= 5:
+            flag = 0
+
+    if flag == 1:
+        print('Student Name:',name)
+        print('Roll No:', roll_no)
+        print('Status: Pass')
+        print('GPA:',gpa)
+    else:
+        print('Student Name:',name)
+        print('Roll No:', roll_no)
+        print('Status: Fail')
+        print('GPA: None')
+
+    return 0
 
 

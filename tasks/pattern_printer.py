@@ -17,4 +17,40 @@ def print_pattern(n : int) -> None:
              Do not return anything.
     """
     # Write your code here
+    for i in range(n+1, 1, -1):
+
+        for k in range(1, i - 1):
+            print("-", end="-")
+        for k in range(97 + n - 1, 97 + i - 3, -1):
+            print(chr(k), end="-")
+        for k in range(97 + i - 1, 97 + n):
+            if k == 97 + n - 1:
+                print(chr(k), end="")
+            else:
+                print(chr(k), end="-")
+        for k in range(i, 2, -1):
+            if k == n+1:
+                print("-", end="")
+            else:
+                print("-", end="-")
+        print("")
+
+    for i in range(1, n):
+
+        for j in range(i):
+            print("-", end="-")
+
+        for k in range(97 + (n-1), 97 + (i - 1), -1):
+            print(chr(k), end="-")
+
+        for j in range(97 + i + 1, 97 + (n-1) + 1):
+            print(chr(j), end="-")
+
+        for k in range(i):
+            if k == 0:
+                print("-", end="")
+            else:
+                print("-", end="-")
+        print("")
+    return 0
     
